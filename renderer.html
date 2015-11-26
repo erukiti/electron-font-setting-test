@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <meta charset="utf-8">
+  <title data-bind="text: title"></title>
+  <!--<link rel="stylesheet" href="./index.css">-->
+<body>
+
+<div data-bind="component: 'font-selector'"></div>
+
+<script>
+  window.onerror = function(message, file, line, column, err) {
+    console.dir(err.stack);
+  }
+  Rx = require('rx');
+  wx = require('./node_modules/webrx/dist/web.rx');
+  // require('coffee-script/register');
+  // require('babel-core/register');
+  require('./renderer.js');
+</script>
+</body>
+</html>
